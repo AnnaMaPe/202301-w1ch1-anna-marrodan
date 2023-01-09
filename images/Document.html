@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5500/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head><body><h1 id="consola">🦄Consola <span id="consola2">Anna🦄</span> </h1>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="./Document_files/script.js"></script>
+    <title>Document</title>
+    <h1 id="title">Calculator<title></title> </h1>
+
+
+    <div class="container">
+    <table id="calculator">
+        <caption>The very best caclulator EVER!</caption>
+        <tbody id="displayscreen">
+            <tr>
+                <td><input id="result" type="text"></td>
+            </tr>
+        </tbody>
+        <tbody class="buttons">
+            <tr id="firstrownumbers">
+                <td><input class="numbers" type="button" value="7" onclick="display(7)"></td>
+                <td><input class="numbers" type="button" value="8" onclick="display(8)"></td>
+                <td><input class="numbers" type="button" value="9" onclick="display(9)"></td>
+            </tr>
+            <tr id="secondrownumbers">
+                <td><input class="numbers" type="button" value="4" onclick="display(4)"></td>
+                <td><input class="numbers" type="button" value="5" onclick="display(5)"></td>
+                <td><input class="numbers" type="button" value="6" onclick="display(6)"></td>
+            </tr>
+            <tr id="thirdrownumbers">
+                <td><input class="numbers" type="button" value="1" onclick="display(3)"></td>
+                <td><input class="numbers" type="button" value="2" onclick="display(2)"></td>
+                <td><input class="numbers" type="button" value="3" onclick="display(1)"></td>
+            </tr>
+            <tr id="forthrownumbers">
+                <td><input class="numbers" type="button" value="0" onclick="display(0)"></td>
+                <td><input class="numbers" type="button" value="00" onclick="display(&#39;00&#39;)"></td>
+                <td><input class="numbers" type="button" value="." onclick="display(&#39;.&#39;)"></td>
+            </tr>
+        </tbody>
+        <tbody class="buttons">
+            <tr id="firstrowoperators">
+                <td><input class="upperoperators" type="button" value="C" onclick="clearLastInput()"></td>
+                <td><input class="upperoperators" type="button" value="CE" onclick="clearWholeScreen()"></td>
+            </tr>
+            <tr id="secondrowsigns">
+                <td><input class="operators" type="button" value="÷" onclick="display(&#39;/&#39;)"></td>
+                <td><input class="operators" type="button" value="√" onclick="display(&#39;√&#39;) + squareRoot()"></td>
+            </tr>
+            <tr id="thirdrowsigns">
+                <td><input class="operators" type="button" value="-" onclick="display(&#39;-&#39;)"></td>
+                <td><input class="operators" type="button" value="x" onclick="display(&#39;*&#39;)"></td>
+            </tr>
+            <tr id="forthrowsigns">
+                <td><input class="operators" type="button" value="+" onclick="display(&#39;+&#39;)"></td>
+                <td><input class="operators" type="button" value="=" onclick="calculate()"></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+
+
+    <script type="text/javascript" src="./Document_files/main calculator.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="./Document_files/style.css"></body></html>
